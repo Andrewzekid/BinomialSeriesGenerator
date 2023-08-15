@@ -1,24 +1,27 @@
-# A Fully Functional Python Program to Generate Binomial Series Expansion Problems for Math Practice
-Python Code to generate a binomial series approximation question in the form of $`(a+bx)^n`$
-Built with Python [![My Skills](https://skillicons.dev/icons?i=python)](https://skillicons.dev) and Sympy
+# Binomial Series Generator
+Python Code to generate a binomial series approximation question in the form of $`(a+bx)^n`$ 
+
+
+## A Fully Functional Python Program to Generate Binomial Series Expansion Problems for Math Practice
 
 ```
 Q. Find a binomial series approximation for:
-$`(x+2)^0.5`$
+(x+2)^0.5
 and use it to approximate (to 3 d.p):
-$2.65^0.5$
+2.65^0.5
 Type your answer: 1.629
 Your answer was incorrect! The actual answer calculated is 1.628 and the answer approximated by the program is 1.628
 ```
 
 ## Features:
-- Generate a Binomial Series Representation for $`(a+bx)^n`$.
-- Works for Negative and Fractional Values of n
+- Generate a **Binomial Series Representation** for $`(a+bx)^n`$.
+- Works for **Negative and Fractional Values** of n
 - Calculate the **range of validity** for this series
-- Estimates the value of an expression I.e: $`\sqrt{5}`$ using a binomial expansion and checks the users estimate against it, telling the user if they got it right or not.
-- Great math test prep tool! (I used this to practice for my G10 sequences and series test.)
+- **Estimates the value of an expression** I.e: $`\sqrt{5}`$ using a binomial expansion and checks the users estimate against it, telling the user if they got it right or not.
+- Great **math test prep tool!** (I used this to practice for my G10 sequences and series test.)
 
-### Usage Instructions
+Usage Instructions
+----
 Clone this repository or download and unzip the code. Install python, sympy, numpy, and IPython.
 Open up main.py or create a python file in the same folder and import **`BinomialGenerator`** from main.py: ```from main import BinomialGenerator```
 
@@ -42,22 +45,29 @@ generator = BinomialGenerator(x=x_symbol,n=0.5,a=2,b=1,terms=4)
 generator.approximate_num() 
 ```
 
-**x** is the sympy symbol we are using to represent x. a,b,n are the a,b,n values in $`(a+bx)^n`$. **terms** is the number of terms of binomial series which we want the program to generate.
+**x** is the sympy symbol we are using to represent x. 
+
+**a,b,n** are the a,b,n values in $`(a+bx)^n`$. 
+
+**terms** is the number of terms of binomial series which we want the program to generate.
+
 In this case, the program will generate a 4 term binomial series for $`(x+2)^0.5`$.
 
-
-Sample Output:
 ```
 Q. Find a binomial series approximation for:
-$`(x+2)^0.5`$
+(x+2)^0.5
 and use it to approximate (to 3 d.p):
-$2.65^0.5$
+2.65^0.5
 Type your answer: 345
-Your answer was incorrect! The actual answer calculated is 1.6278820596099706 and the answer approximated by the program is 1.62838543406463
+Your answer was incorrect! The actual answer calculated is 1.6278820596099706
+The answer approximated by the program is 1.62838543406463
 ```
 
+<img width="878" alt="image" src="https://github.com/Andrewzekid/BinomialSeriesGenerator/assets/79450923/849095bd-9c47-4c53-ba9c-7cb90ddc15c5">
+
+
 If we want to see the binomial expansion that the program generated, we can also run the following:
-```
+```python
 #Prints the binomial series representation calculated by the program
 print(self.binomial_series)
 
