@@ -1,5 +1,5 @@
 # A Fully Functional Python Program to Generate Binomial Series Expansion Problems for Math Practice
-Python Code to generate a binomial series approximation question in the form of $`(a+bx)^n`$ where $n$ < 1. 
+Python Code to generate a binomial series approximation question in the form of $`(a+bx)^n`$
 Built with Python [![My Skills](https://skillicons.dev/icons?i=python)](https://skillicons.dev) and Sympy
 
 ```
@@ -12,13 +12,14 @@ Your answer was incorrect! The actual answer calculated is 1.628 and the answer 
 ```
 
 ## Features:
-- Generate a Binomial Series Representation for $`(a+bx)^n`$ where $n$ < 1.
+- Generate a Binomial Series Representation for $`(a+bx)^n`$.
+- Works for Negative and Fractional Values of n
 - Calculate the **range of validity** for this series
 - Estimates the value of an expression I.e: $`\sqrt{5}`$ using a binomial expansion and checks the users estimate against it, telling the user if they got it right or not.
 - Great math test prep tool! (I used this to practice for my G10 sequences and series test.)
 
 ### Usage Instructions
-Clone this repository or download and unzip the code. Install sympy, numpy, and IPython.
+Clone this repository or download and unzip the code. Install python, sympy, numpy, and IPython.
 Open up main.py or create a python file in the same folder and import **`BinomialGenerator`** from main.py: ```from main import BinomialGenerator```
 
 **`BinomialGenerator`** is what we will use to generate a binomial series expansion for $`(a+bx)^n`$
@@ -35,13 +36,15 @@ import numpy as np
 x_symbol = smp.symbols("x")
 
 #Sample code
-generator = BinomialGenerator(x=x_symbol,n=0.5,a=2,b=1,terms=4) #**x** is the sympy symbol we are using to represent x. a,b,n are the a,b,n values in $`(a+bx)^n`$. **terms** is the number of terms of binomial series which we want the program to generate.
-#In this case, the program will generate a 4 term binomial series for $`(x+2)^0.5`$.
+generator = BinomialGenerator(x=x_symbol,n=0.5,a=2,b=1,terms=4)
 
 #Give the user an expression and asks the user to calculate an estimation using binomial series. The program will run its own calculation and check if the users one is correct making for great math practice!!
 generator.approximate_num() 
-
 ```
+
+**x** is the sympy symbol we are using to represent x. a,b,n are the a,b,n values in $`(a+bx)^n`$. **terms** is the number of terms of binomial series which we want the program to generate.
+In this case, the program will generate a 4 term binomial series for $`(x+2)^0.5`$.
+
 
 Sample Output:
 ```
